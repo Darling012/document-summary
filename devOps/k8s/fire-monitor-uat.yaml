@@ -1,0 +1,447 @@
+﻿---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-03-04T07:25:25Z"
+    labels:
+      k8s-app: deep-blue-auth-biz
+    name: deep-blue-auth-biz
+    namespace: fire-monitor-uat
+    resourceVersion: "115962339"
+    selfLink: /api/v1/namespaces/fire-monitor-uat/services/deep-blue-auth-biz
+    uid: 9d2695aa-0832-4b93-81ae-c3c01f83fe46
+  spec:
+    clusterIP: 10.244.122.57
+    ports:
+    - name: deep-blue-auth-biz
+      port: 8080
+      protocol: TCP
+      targetPort: 28082
+    selector:
+      k8s-app: deep-blue-auth-biz
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-03-04T07:27:22Z"
+    labels:
+      k8s-app: deep-blue-fire-device
+    name: deep-blue-fire-device
+    namespace: fire-monitor-uat
+    resourceVersion: "115963036"
+    selfLink: /api/v1/namespaces/fire-monitor-uat/services/deep-blue-fire-device
+    uid: 313fc898-4df2-4672-ab1e-461bf8186dd0
+  spec:
+    clusterIP: 10.244.74.60
+    ports:
+    - name: deep-blue-fire-device
+      port: 8080
+      protocol: TCP
+      targetPort: 28070
+    selector:
+      k8s-app: deep-blue-fire-device
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      field.cattle.io/publicEndpoints: '[{"addresses":["10.16.32.151"],"port":32200,"protocol":"TCP","serviceName":"fire-monitor-uat:deep-blue-gateway","allNodes":true}]'
+    creationTimestamp: "2021-03-04T07:20:14Z"
+    labels:
+      k8s-app: deep-blue-gateway
+    name: deep-blue-gateway
+    namespace: fire-monitor-uat
+    resourceVersion: "115960288"
+    selfLink: /api/v1/namespaces/fire-monitor-uat/services/deep-blue-gateway
+    uid: c93bf836-6d21-4f9b-ad74-31c420d5bcd6
+  spec:
+    clusterIP: 10.244.101.191
+    externalTrafficPolicy: Cluster
+    ports:
+    - name: deep-blue-gateway
+      nodePort: 32200
+      port: 8080
+      protocol: TCP
+      targetPort: 28081
+    selector:
+      k8s-app: deep-blue-gateway
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-03-04T07:23:16Z"
+    labels:
+      k8s-app: deep-blue-upms-biz
+    name: deep-blue-upms-biz
+    namespace: fire-monitor-uat
+    resourceVersion: "115961583"
+    selfLink: /api/v1/namespaces/fire-monitor-uat/services/deep-blue-upms-biz
+    uid: be8617bc-6c31-4414-9bd2-7a40ae4c7f5e
+  spec:
+    clusterIP: 10.244.109.97
+    ports:
+    - name: deep-blue-upms-biz
+      port: 8080
+      protocol: TCP
+      targetPort: 28083
+    selector:
+      k8s-app: deep-blue-upms-biz
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  data:
+    root-cert.pem: |
+      -----BEGIN CERTIFICATE-----
+      MIIC3TCCAcWgAwIBAgIQTP/g8igoDOsjqgMAxHaN8DANBgkqhkiG9w0BAQsFADAY
+      MRYwFAYDVQQKEw1jbHVzdGVyLmxvY2FsMB4XDTIxMDIyNDAyNTkyNloXDTMxMDIy
+      MjAyNTkyNlowGDEWMBQGA1UEChMNY2x1c3Rlci5sb2NhbDCCASIwDQYJKoZIhvcN
+      AQEBBQADggEPADCCAQoCggEBAM8QboGLlUyUMXZ8kV/X6/+IQuWq0Tn27xN8ER48
+      +TbGGfxtKQAapQ5t0L78bAcJ1d/bvfBN55q1apzY3hvzxZwb4U5Rve6dA9rhwHFc
+      jE/KAh+jkCjif1++B+B3sh2fBXmnky3JyvKdsqD0nfDD2fBlInT/O+Z6348fwTxO
+      4GV4lllrXt5eyBVMnvOcE7QHNd6j8sb0jTiYCc84jj2GfzI1nzCyKBC9TZA6laXw
+      ZlfhN/Kn/db+4Cz7/FZEnISEcV2LC93hV1graiqzwuhFVCmMPtj98hH1O2nUmotC
+      BsCxX/u5k/0jmOM89cKICaYGqXVr1UbZ2+YB/GnievXwMNcCAwEAAaMjMCEwDgYD
+      VR0PAQH/BAQDAgIEMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+      ALtgRT7IDH6NGSgH0g5E8MshOMXhlmj/RsMUDTH9SCsRKqtTGiFuqHdjeWjuRzjt
+      1hc66FpJU8TN9+X5axZyKaP6oAhkvDezodUg+V5R2gwlWthPpaTP/pm4xM3xF36b
+      /vhOxBC5HcckmHjzwtjUad8iEncGHqp1wiv2oZ/KHE38zaBtjQIEcgjZXOAqntfs
+      kmkmGKWJuYJma7K3P7RxMHTUhzYIDBB//4BnyCSIqIxUBjWmOyE8A2vFoNMjm1kG
+      94TzbQKTRBBB8JIj/J/IPktrrg+lWV6uTBsPVSqGJ5lZcD1thp1HJUB4ZRJjGBH+
+      GCHImU/zs1W328VkkmfQ7s8=
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2021-03-04T02:33:26Z"
+    labels:
+      istio.io/config: "true"
+    name: istio-ca-root-cert
+    namespace: fire-monitor-uat
+    resourceVersion: "115854150"
+    selfLink: /api/v1/namespaces/fire-monitor-uat/configmaps/istio-ca-root-cert
+    uid: d8126c31-9ecc-4206-ad66-8b5aeecbe895
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2021-03-04T02:55:03Z"
+    generation: 2
+    labels:
+      app: k8s-app
+      k8s-app: deep-blue-auth-biz
+    name: deep-blue-auth-biz
+    namespace: fire-monitor-uat
+    resourceVersion: "115924371"
+    selfLink: /apis/apps/v1/namespaces/fire-monitor-uat/deployments/deep-blue-auth-biz
+    uid: a51efd65-13c6-4a77-a691-842bb5a1d9aa
+  spec:
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        app: k8s-app
+        k8s-app: deep-blue-auth-biz
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: k8s-app
+          k8s-app: deep-blue-auth-biz
+      spec:
+        containers:
+        - env:
+          - name: JAVA_OPTS
+            value: -Xmx1024m
+          image: core.harbor.cz.shenlan.com/cvbase-jinan/deep-blue-auth-biz-fire-monitor:3
+          imagePullPolicy: IfNotPresent
+          name: deep-blue-auth-biz
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1500Mi
+            requests:
+              cpu: 500m
+              memory: 1500Mi
+          securityContext:
+            capabilities: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        imagePullSecrets:
+        - name: harbor-cz
+        nodeSelector:
+          project: cvbase-jinan
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-03-04T02:55:03Z"
+      lastUpdateTime: "2021-03-04T02:55:03Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "42"
+    creationTimestamp: "2021-03-04T07:13:10Z"
+    generation: 43
+    labels:
+      app: k8s-app
+      k8s-app: deep-blue-fire-device
+    name: deep-blue-fire-device
+    namespace: fire-monitor-uat
+    resourceVersion: "134875322"
+    selfLink: /apis/apps/v1/namespaces/fire-monitor-uat/deployments/deep-blue-fire-device
+    uid: 847cf960-bb60-4c73-8632-06ac4e293740
+  spec:
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        app: k8s-app
+        k8s-app: deep-blue-fire-device
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: k8s-app
+          k8s-app: deep-blue-fire-device
+      spec:
+        containers:
+        - env:
+          - name: JAVA_OPTS
+            value: -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -Xms1024m -Xmx2048m
+          image: core.harbor.cz.shenlan.com/cvbase-jinan/deep-blue-fire-device-fire-monitor:62
+          imagePullPolicy: IfNotPresent
+          name: deep-blue-fire-device
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1500Mi
+            requests:
+              cpu: 500m
+              memory: 1500Mi
+          securityContext:
+            capabilities: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        imagePullSecrets:
+        - name: harbor-cz
+        nodeSelector:
+          project: cvbase-jinan
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-03-04T07:13:10Z"
+      lastUpdateTime: "2021-03-04T07:13:10Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 43
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "9"
+      field.cattle.io/publicEndpoints: '[{"addresses":["10.16.32.151"],"port":32200,"protocol":"TCP","serviceName":"fire-monitor-uat:deep-blue-gateway","allNodes":true},{"addresses":["10.16.32.155","10.16.32.157","10.16.32.165","10.16.32.229","10.16.32.23","10.16.32.32","10.16.35.115","10.16.35.138","10.16.35.166"],"port":443,"protocol":"HTTPS","serviceName":"fire-monitor-uat:deep-blue-gateway","ingressName":"fire-monitor-uat:merc.deepblueai.com","hostname":"merc.deepblueai.com","path":"/","allNodes":false}]'
+    creationTimestamp: "2021-03-04T02:37:44Z"
+    generation: 19
+    labels:
+      app: k8s-app
+      k8s-app: deep-blue-gateway
+    name: deep-blue-gateway
+    namespace: fire-monitor-uat
+    resourceVersion: "206038788"
+    selfLink: /apis/apps/v1/namespaces/fire-monitor-uat/deployments/deep-blue-gateway
+    uid: d1896149-93ba-4ea3-afd9-f5239f44a55f
+  spec:
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        app: k8s-app
+        k8s-app: deep-blue-gateway
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: k8s-app
+          k8s-app: deep-blue-gateway
+      spec:
+        containers:
+        - env:
+          - name: JAVA_OPTS
+            value: -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -Xms1024m -Xmx2048m
+          image: core.harbor.cz.shenlan.com/cvbase-jinan/deep-blue-gateway-fire-monitor:31
+          imagePullPolicy: IfNotPresent
+          name: deep-blue-gateway
+          resources:
+            limits:
+              cpu: "1"
+              memory: 3000Mi
+            requests:
+              cpu: "1"
+              memory: 3000Mi
+          securityContext:
+            capabilities: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        imagePullSecrets:
+        - name: harbor-cz
+        nodeSelector:
+          project: cvbase-jinan
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-03-04T02:37:44Z"
+      lastUpdateTime: "2021-03-04T02:37:44Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 19
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "6"
+    creationTimestamp: "2021-03-04T03:03:32Z"
+    generation: 6
+    labels:
+      app: k8s-app
+      k8s-app: deep-blue-upms-biz
+    name: deep-blue-upms-biz
+    namespace: fire-monitor-uat
+    resourceVersion: "119103799"
+    selfLink: /apis/apps/v1/namespaces/fire-monitor-uat/deployments/deep-blue-upms-biz
+    uid: 3fb48a3d-6319-49ad-b004-a44daba3cfce
+  spec:
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        app: k8s-app
+        k8s-app: deep-blue-upms-biz
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          cattle.io/timestamp: "2021-03-10T07:42:33Z"
+        creationTimestamp: null
+        labels:
+          app: k8s-app
+          k8s-app: deep-blue-upms-biz
+      spec:
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: project
+                  operator: In
+                  values:
+                  - cvbase-jinan
+        containers:
+        - env:
+          - name: JAVA_OPTS
+            value: -Xmx1024m
+          image: core.harbor.cz.shenlan.com/cvbase-jinan/deep-blue-upms-biz-fire-monitor:4
+          imagePullPolicy: IfNotPresent
+          name: deep-blue-upms-biz
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1500Mi
+            requests:
+              cpu: 500m
+              memory: 1500Mi
+          securityContext:
+            capabilities: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        imagePullSecrets:
+        - name: harbor-cz
+        nodeSelector:
+          project: cvbase-jinan
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-03-04T03:03:33Z"
+      lastUpdateTime: "2021-03-04T03:03:33Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 6
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: List
