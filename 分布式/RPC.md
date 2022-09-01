@@ -1,4 +1,7 @@
-### rpc
+## rpc
+
+1. [微服务之间的最佳调用方式](https://mp.weixin.qq.com/s?__biz=MzU0MzQ5MDA0Mw==&mid=2247488428&idx=2&sn=bd688553c82af1f597e5adfef666b996&chksm=fb0bf938cc7c702e6b1af4d18b279520dcdf7a21bf73d7482aabc1bf068f674c662b7f491e34&mpshare=1&scene=1&srcid=&sharer_sharetime=1580145600204&sharer_shareid=07754c1336c3524bfffedc4dc59111b6&key=1de96bf14ac83757a9c10aa802bee067fce6b42c902237f3ef5eb70fbbacf01cb54182438ae253d413a0b182f70b8f240fd86a78a253d8434f5f97162691f59ebe7ea39accdc5957595938cf48ffa27b&ascene=1&uin=MTY5NjI3ODY2MQ%3D%3D&devicetype=Windows+10&version=62070158&lang=zh_CN&exportkey=AY7m%2FDd68vPir5gLzpgMPA0%3D&pass_ticket=w0h%2FGWHBYwvP7E%2BIIOeqS7OZUHTXM1M%2B1MRno83Zh0Q1s56m5uIB9otCBPvTvaUT)
+2. 
 
 ```java
         GenericResponse response = null;
@@ -52,8 +55,9 @@ https://www.zhihu.com/question/321451061
 
 1. k12中业务异常http状态码为非200，会进入fegin的ErrorDecoder
 2. ErrorDecoder通过swich case httpStatus后，重新抛出了重试、token过期异常，在swich default尝试解析返回体判断有没有code msg，没有抛出FeignRequestException，有则构建抛出内部服务调用异常,且try catch default 抛出Exception进行最大的兜底，最后交由advice统一异常处理捕获。
-3. AIVideo项目ErrorDecoder，对httpStatus>=400 && <=500的都统一抛出DeepBlueSysException，其他状态码返回feign.FeignException.errorStatus(methodKey, response);，并@SneakyThrows兜底。
-4. AIVideo的业务错误httpStatus为200，不会进入fegin错误处理，所以在fegin调用后要判断业务状态码
+3. k12在自定义异常设计中，业务异常用httpStatus非200标识，且后边的业务系统都至少经过一层fegin调用。
+4. AIVideo项目ErrorDecoder，对httpStatus>=400 && <=500的都统一抛出DeepBlueSysException，其他状态码返回feign.FeignException.errorStatus(methodKey, response);，并@SneakyThrows兜底。
+5. AIVideo的业务错误httpStatus为200，不会进入fegin错误处理，所以在fegin调用后要判断业务状态码
 
 ##### refrence
 
@@ -68,6 +72,64 @@ https://www.zhihu.com/question/321451061
 5. [SpringCloud组件OpenFeign——将服务端详细异常信息返回给客户端](https://blog.csdn.net/m0_47503416/article/details/122089913)
 
 6. [feign服务端出异常客户端处理的方法](https://www.cnblogs.com/lori/p/11157394.html)
+
+## HTTPClient
+
+1. [HTTP超时、重复请求必见坑点及解决方案](https://mp.weixin.qq.com/s?__biz=MzAwNjkxNzgxNg==&mid=2247489656&idx=2&sn=4a4e08d448fd29eb52e99ecc6e6baffd&chksm=9b0743afac70cab9f95cdd18b910bd26faa021264e9a66866161e47bde4fd6afee21f32abbe7&mpshare=1&scene=1&srcid=12070SJCGoYxHUAsg1nXb09x&sharer_sharetime=1607354508881&sharer_shareid=07754c1336c3524bfffedc4dc59111b6&key=54253d61e149ca80533ac1405a13d8e7d764e680d4a02fec40aee220453e90346662968d918c250ce7ce9d8494b702efb83f9a69af0f0444c60171880273cbb1dfd968cb79fc02986ac70be139a931f86b3d87ee1f92720e667a61f3ff9c61cbbbb74b4e35e65c2ab9082efd1d1720983c4c63d464d223bcab215e5eb4cfc94a&ascene=1&uin=MTY5NjI3ODY2MQ%3D%3D&devicetype=Windows+10&version=62080079&lang=zh_CN&exportkey=AacUOt3UCGkSWRrl9x6%2FzEw%3D&pass_ticket=ohX3vsEs9B4U%2FeDpPdBg6umBNMGxbFS1FmZsoIQqhvoKetmakeEg0RLTwkql3aUX&wx_header=0)
+2. 
+
+## Fegin
+
+##### 问题：
+
+1. 
+
+1.  全局异常处理
+2. get请求多参数
+
+##### refrence
+
+1. https://juejin.cn/column/7087106428485238791
+2. https://www.modb.pro/db/109223
+3. http://docs.springcloud.cn/user-guide/feign/
+
+### 配置
+
+### @FeignClient各参数
+
+1. [那天晚上和@FeignClient注解的深度交流](https://juejin.cn/post/6844904039595917319)
+
+##### 超时与重试
+
+1. [聊聊openfeign的超时和重试](https://cloud.tencent.com/developer/article/1749558)
+
+#### 日志
+
+1. [Feign 的细粒度与全局 日志打印](https://blog.csdn.net/Tiny_Demon/article/details/124717616)
+
+##### 丢失请求头
+
+1.  [Feign 调用丢失Header的解决方案](https://www.cnblogs.com/huanchupkblog/p/11895979.html)
+
+### Fegin的继承
+
+1. [使用Feign的一些问题以及如何解决？](https://mp.weixin.qq.com/s/yzGWfxBsRbeDdDFYXQHNvg)
+
+### 调用过程
+
+1.  [Spring Cloud Feign 调用过程分析](https://www.cnblogs.com/rickiyang/p/11802487.html)
+
+### 常见问题
+
+多参数请求、上传文件、form表单、分页
+
+1. [Feign常见问题总结](https://www.imooc.com/article/289005)
+2. [Spring Cloud Feign 复杂用法：文件上传+复杂参数传递【官方方案】](https://hicode.club/articles/2018/12/25/1550590735080.html)
+3. [Feign远程调用传递对象参数 并 返回自定义分页数据完整过程](https://blog.csdn.net/qq_36068521/article/details/102565751)
+4. [如何使用Feign构造多参数的请求](https://www.imooc.com/article/289000)
+5. [RequestParam，RequestBody，SpringQueryMap](https://www.jianshu.com/p/9d1d770e22b0)
+
+
 
 
 ### 加密加签
