@@ -14,7 +14,7 @@
    3. 配置管理：nacos
    4. 服务发现：nacos
    5. 负载均衡、容错：nginx、gateway、ribbon、hystrix
-   6. 安全：
+   6. 安全与认证：oAuth2、keycloak、spring security
 3. CI/CD
 
    1. 持续集成：git、maven、docker、jenkins
@@ -78,7 +78,7 @@ CD: 自写jenkins脚本
       1. 镜像 dockerFile
       2. jar    pom.xml  yaml
    2. CD
-      1. [dockerCompose](https://segmentfault.com/a/1190000023655147) 
+      1. [dockerCompose](https://segmentfault.com/a/1190000023655147)
       2. helm
 2. https://www.jianshu.com/p/a471d859051a
 3. https://blog.csdn.net/fuck487/article/details/75104765
