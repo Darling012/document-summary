@@ -1,9 +1,6 @@
 # Your Book Title
 
 - [Dev Ops](devOps/devOps.md)
-  - [Jenkins](devOps/jenkins/jenkins.md)
-  - K 8 S
-    * [Dev Ops](devOps/k8s/devOps.md)
   * [54服务器](devOps/54服务器.md)
   * [66服务器](devOps/66服务器.md)
   * [Dev Ops](devOps/devOps.md)
@@ -15,20 +12,24 @@
   * [日志分析](devOps/日志分析.md)
   * [租户](devOps/租户.md)
   * [链路追踪](devOps/链路追踪.md)
+- Docs
+  - Universal
+    * [大文件上传](docs/universal/大文件上传.md)
+    * [缓存](docs/universal/缓存.md)
+  - 分布式
+    * [HA](docs/分布式/HA.md)
 - Mysql
   - [HA](mysql/HA/HA.md)
     * [Nginx](mysql/HA/nginx.md)
-  * [simpread-海量数据 - 事务一致性 2_淘宝沈询_WhisperXD_新浪博客](mysql/simpread-海量数据%20- 事务一致性 2_淘宝沈询_WhisperXD_新浪博客.md)
-  * [simpread-海量数据%20- 事务一致性 2_淘宝沈询_WhisperXD_新浪博客](mysql/simpread-海量数据%20-%20事务一致性 2_淘宝沈询_WhisperXD_新浪博客.md)
   * [事务](mysql/事务.md)
 - Universal
   * [mybatisPlus批量操作](universal/mybatisPlus批量操作.md)
   * [redis实现消息队列](universal/redis实现消息队列.md)
   * [typora图床](universal/typora图床.md)
-  * [加密加签](universal/加密加签.md)
   * [大数据量同步](universal/大数据量同步.md)
-  * [大数据量同步与大文件上传](universal/大数据量同步与大文件上传.md)
+  * [大文件上传](universal/大文件上传.md)
   * [微信](universal/微信.md)
+  * [缓存](universal/缓存.md)
 - 分布式
   * [Config](分布式/config.md)
   * [Gateway](分布式/gateway.md)
@@ -39,8 +40,7 @@
   * [熔断限流](分布式/熔断限流.md)
   * [负载均衡](分布式/负载均衡.md)
 - [流媒体](流媒体/流媒体.md)
-  * [FFMPEG 常用命令](流媒体/FFMPEG常用命令.md)
-  * [FFMPEG%20常用命令](流媒体/FFMPEG常用命令.md)
+  * [FFMPEG常用命令](流媒体/FFMPEG常用命令.md)
   * [服务器](流媒体/服务器.md)
   * [音视频](流媒体/音视频.md)
 - 质效
@@ -50,4 +50,3 @@
   * [数据业务逻辑校验](质效/数据业务逻辑校验.md)
   * [缓存](质效/缓存.md)
   * [项目](质效/项目.md)
-* [个人简历](个人简历.md)

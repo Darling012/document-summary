@@ -1,0 +1,7 @@
+ {
+        "title" : "我对一些问题的思考过程",
+        "theme-default": {
+            "showLevel": true
+        },
+        "plugins": ["toggle-chapters", "theme-comscore"]
+    }
