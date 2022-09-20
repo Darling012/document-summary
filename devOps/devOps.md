@@ -1,4 +1,4 @@
-[TOC]
+
 
 ### 软件工程全生命周期工具：
 
@@ -55,40 +55,4 @@ CD: 自写jenkins脚本
 **我们要做什么**？
 
 符合开发场景的最佳实践。
-
-### 变量配置
-
-1. jar 启动所必须配置，本地bootstrap.yml,application.yml,远端nacos上配置,外部环境变量
-2. 单个服务，如服务名端口等配置由每个模块Pom定义，后编译进yaml
-3. mvn命令传递进pom的参数
-4. jenkinsFile传递进mvn命令的参数
-5. jenkinsFile传递进dockerFile的参数
-6. dockerFile传递进java - jar的参数
-
-#### 变量
-
-1. 环境变量，mvn、jar、docker运行时都可读取，dockerCompose可提供，nacos中的yaml也可以用
-2. 命令行传入的
-3. 各个文件定义的
-
-#### 文件
-
-1. jenkinsFile
-   1. CI
-      1. 镜像 dockerFile
-      2. jar    pom.xml  yaml
-   2. CD
-      1. [dockerCompose](https://segmentfault.com/a/1190000023655147)
-      2. helm
-2. https://www.jianshu.com/p/a471d859051a
-3. https://blog.csdn.net/fuck487/article/details/75104765
-
-#### 优先级
-
-应该尽量放在最外部，只有不通用的才放在尽可能高的层
-
-#### k12
-
-1. cloud模块dockerCompose中的变量，从.env统一读取，供nacos中的yaml和bootstrap.yml使用
-2. edge模块的dockerCompose，一种也是直接给springboot的yaml使用，一种是JAVA_OPTS，通过dockerFile传入ENV传入ENTRYPOINT，供java -jar使用
 
