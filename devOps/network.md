@@ -21,3 +21,4 @@
 8. [交换机接口类型中的MDI、MDIX与Auto MDI/MDIX](https://blog.51cto.com/elger/524460)
 9. [图解：二层与三层交换机之间到底有什么区别?](https://www.sdnlab.com/25737.html)
 
+双网卡配置
