@@ -15,11 +15,11 @@
   * [日志分析](devOps/日志分析.md)
   * [租户](devOps/租户.md)
   * [链路追踪](devOps/链路追踪.md)
-- Mysql
+- mysql
   - [HA](mysql/HA/HA.md)
     * [Nginx](mysql/HA/nginx.md)
   * [事务](mysql/事务.md)
-- Universal
+- universal
   * [excel导入数据](universal/excel导入数据.md)
   * [mybatisPlus批量操作](universal/mybatisPlus批量操作.md)
   * [redis实现消息队列](universal/redis实现消息队列.md)
