@@ -6,7 +6,8 @@
         "plugins": [
         "-lunr", "-search", "search-pro",
         "back-to-top-button",
-        "splitter"
+        "splitter",
+        "expandable-chapters"
         ]
 
     }
