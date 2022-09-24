@@ -1,0 +1,1010 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>mybatisPlus批量操作 · 我对一些问题的思考过程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="redis实现消息队列.html" />
+    
+    
+    <link rel="prev" href="excel导入数据.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../devOps/devOps.html">
+            
+                <a href="../devOps/devOps.html">
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../devOps/jenkins/jenkins.md">
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    K 8 S
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../devOps/k8s/devOps.md">
+            
+                <span>
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../devOps/54服务器.html">
+            
+                <a href="../devOps/54服务器.html">
+            
+                    
+                    54服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../devOps/66服务器.html">
+            
+                <a href="../devOps/66服务器.html">
+            
+                    
+                    66服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../devOps/devOps.html">
+            
+                <a href="../devOps/devOps.html">
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../devOps/linux.html">
+            
+                <a href="../devOps/linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../devOps/maven.html">
+            
+                <a href="../devOps/maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../devOps/Metric监控.html">
+            
+                <a href="../devOps/Metric监控.html">
+            
+                    
+                    Metric监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../devOps/network.html">
+            
+                <a href="../devOps/network.html">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../devOps/nginx.html">
+            
+                <a href="../devOps/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../devOps/日志分析.html">
+            
+                <a href="../devOps/日志分析.html">
+            
+                    
+                    日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../devOps/租户.html">
+            
+                <a href="../devOps/租户.html">
+            
+                    
+                    租户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../devOps/链路追踪.html">
+            
+                <a href="../devOps/链路追踪.html">
+            
+                    
+                    链路追踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../mysql/HA/HA.html">
+            
+                <a href="../mysql/HA/HA.html">
+            
+                    
+                    HA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../mysql/HA/nginx.html">
+            
+                <a href="../mysql/HA/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../mysql/事务.html">
+            
+                <a href="../mysql/事务.html">
+            
+                    
+                    事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    universal
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="excel导入数据.html">
+            
+                <a href="excel导入数据.html">
+            
+                    
+                    excel导入数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="mybatisPlus批量操作.html">
+            
+                <a href="mybatisPlus批量操作.html">
+            
+                    
+                    mybatisPlus批量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="redis实现消息队列.html">
+            
+                <a href="redis实现消息队列.html">
+            
+                    
+                    redis实现消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="typora图床.html">
+            
+                <a href="typora图床.html">
+            
+                    
+                    typora图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="一个请求的过程..html">
+            
+                <a href="一个请求的过程..html">
+            
+                    
+                    一个请求的过程.
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="大数据量同步.html">
+            
+                <a href="大数据量同步.html">
+            
+                    
+                    大数据量同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="大文件上传.html">
+            
+                <a href="大文件上传.html">
+            
+                    
+                    大文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="微信.html">
+            
+                <a href="微信.html">
+            
+                    
+                    微信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="缓存.html">
+            
+                <a href="缓存.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    分布式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../分布式/SpringCloud.html">
+            
+                <a href="../分布式/SpringCloud.html">
+            
+                    
+                    Spring Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    微服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../微服务/config.html">
+            
+                <a href="../微服务/config.html">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../微服务/gateway.html">
+            
+                <a href="../微服务/gateway.html">
+            
+                    
+                    Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../微服务/nacos.html">
+            
+                <a href="../微服务/nacos.html">
+            
+                    
+                    Nacos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../微服务/RPC.html">
+            
+                <a href="../微服务/RPC.html">
+            
+                    
+                    RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../微服务/注册中心.html">
+            
+                <a href="../微服务/注册中心.html">
+            
+                    
+                    注册中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../微服务/熔断限流.html">
+            
+                <a href="../微服务/熔断限流.html">
+            
+                    
+                    熔断限流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../微服务/负载均衡.html">
+            
+                <a href="../微服务/负载均衡.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../流媒体/流媒体.html">
+            
+                <a href="../流媒体/流媒体.html">
+            
+                    
+                    流媒体
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../流媒体/FFMPEG常用命令.html">
+            
+                <a href="../流媒体/FFMPEG常用命令.html">
+            
+                    
+                    FFMPEG常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../流媒体/服务器.html">
+            
+                <a href="../流媒体/服务器.html">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../流媒体/音视频.html">
+            
+                <a href="../流媒体/音视频.html">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    质效
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../质效/低代码.html">
+            
+                <a href="../质效/低代码.html">
+            
+                    
+                    低代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../质效/异常.html">
+            
+                <a href="../质效/异常.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../质效/数据业务逻辑校验.html">
+            
+                <a href="../质效/数据业务逻辑校验.html">
+            
+                    
+                    数据业务逻辑校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../质效/编程范式.html">
+            
+                <a href="../质效/编程范式.html">
+            
+                    
+                    编程范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../质效/需求.html">
+            
+                <a href="../质效/需求.html">
+            
+                    
+                    需求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >mybatisPlus批量操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x4E09;&#x79CD;&#x63D2;&#x5165;&#x65B9;&#x5F0F;">&#x4E09;&#x79CD;&#x63D2;&#x5165;&#x65B9;&#x5F0F;</h4>
+<ol>
+<li>&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6761;&#xFF0C;&#x5FAA;&#x73AF;&#x6267;&#x884C;insert into user(id, name, age) value (1, &quot;a&quot;, 17)&#xFF1B;</li>
+<li>&#x6279;&#x91CF;&#x6267;&#x884C;&#x591A;&#x6761;insert into user(id, name, age) value (1, &quot;a&quot;, 17)&#xFF1B;</li>
+<li>&#x6267;&#x884C;&#x4E00;&#x6761;sql&#x63D2;&#x5165;&#x591A;&#x6761;&#x6570;&#x636E;insert into user(id, name, age) values (1, &quot;a&quot;, 17), (2,&quot;b&quot;, 18)&#xFF1B;</li>
+</ol>
+<h4 id="refrence">refrence</h4>
+<ol>
+<li><a href="https://segmentfault.com/a/1190000040781858" target="_blank">MyBatis &#x6279;&#x91CF;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684; 3 &#x79CD;&#x65B9;&#x6CD5;&#xFF01;</a></li>
+</ol>
+<h4 id="&#x4E09;&#x4E2A;&#x914D;&#x7F6E;&#x53C2;&#x6570;">&#x4E09;&#x4E2A;&#x914D;&#x7F6E;&#x53C2;&#x6570;</h4>
+<ol>
+<li>rewriteBatchedStatements=true&#xFF1A;&#x6279;&#x91CF;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x7ED9;mysql</li>
+<li>allowMultiQueries=true&#xFF1A;&#x5141;&#x8BB8;&#x4E00;&#x6B21;&#x6027;&#x6267;&#x884C;&#x591A;&#x6761;sql</li>
+<li>max_allowed_packet&#xFF1A;&#x5355;&#x6761;sql&#x957F;&#x5EA6;&#x9650;&#x5236;</li>
+</ol>
+<h5 id="refrence">refrence</h5>
+<ol>
+<li><a href="https://blog.csdn.net/qq_44413835/article/details/117113156" target="_blank">mybatis&#x7684;&#x6279;&#x5904;&#x7406;(&#x6548;&#x7387;)&#x4E4B;rewriteBatchedStatements&#x548C;allowMultiQueries</a></li>
+<li><a href="https://blog.csdn.net/weixin_43944305/article/details/106824519" target="_blank">mysql&#x5F00;&#x542F;&#x6279;&#x91CF;&#x6267;&#x884C;sql&#x53C2;&#x6570;allowMultiQueries&#x4E0E;&#x6279;&#x5904;&#x7406; rewriteBatchedStatements=true(&#x52A0;&#x901F;batchUpdate)</a></li>
+</ol>
+<h3 id="mybatisplus&#x6279;&#x91CF;&#x64CD;&#x4F5C;">mybatisPlus&#x6279;&#x91CF;&#x64CD;&#x4F5C;</h3>
+<ol>
+<li>IService&#x7684;saveBatch&#x5728;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x540E;&#x4E3A;&#x65B9;&#x5F0F;2&#x5426;&#x5219;&#x4E3A;&#x65B9;&#x5F0F;1<ol>
+<li><a href="https://github.com/baomidou/mybatis-plus/issues/3902" target="_blank">https://github.com/baomidou/mybatis-plus/issues/3902</a></li>
+</ol>
+</li>
+<li><a href="https://blog.csdn.net/qq_35549286/article/details/113603176" target="_blank">&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;3</a><ol>
+<li><a href="https://blog.csdn.net/j1231230/article/details/111386018" target="_blank">https://blog.csdn.net/j1231230/article/details/111386018</a></li>
+</ol>
+</li>
+<li><a href="https://blog.csdn.net/qq_28025423/article/details/115680196" target="_blank">&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;3</a><ol>
+<li><a href="https://blog.csdn.net/JonKee/article/details/119772797" target="_blank">Mybatis Plus &#x81EA;&#x5B9A;&#x4E49;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x548C;&#x63D2;&#x5165;&#x65B9;&#x6CD5;</a></li>
+<li><a href="https://www.modb.pro/db/88140" target="_blank">&#x4F18;&#x5316;mybatis-plus&#x7684;&#x6279;&#x91CF;&#x63D2;&#x5165;&#x529F;&#x80FD;</a></li>
+</ol>
+</li>
+<li>&#x8865;&#x5145;<ol>
+<li><a href="https://github.com/baomidou/mybatis-plus/issues/2456" target="_blank">mybatis puls &#x6279;&#x91CF;&#x63D2;&#x5165;&#x65B9;&#x6CD5;&#x7684;&#x5EFA;&#x8BAE;</a></li>
+<li><a href="https://github.com/baomidou/mybatis-plus/issues/2786" target="_blank">mybatis plus saveBatch&#x6279;&#x91CF;&#x63D2;&#x5165;&#x8F83;&#x6162;</a></li>
+</ol>
+</li>
+</ol>
+<h5 id="&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6548;&#x7387;&#x5BF9;&#x6BD4;">&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6548;&#x7387;&#x5BF9;&#x6BD4;</h5>
+<ol>
+<li><a href="https://juejin.cn/post/6939777685170159629" target="_blank">MyBatis-Plus &#x6279;&#x5904;&#x7406;&#x6709;&#x5751;&#xFF0C;&#x6211;&#x6559;&#x4F60;&#x6539;&#x9020;</a></li>
+<li><a href="https://github.com/baomidou/mybatis-plus/issues/1406" target="_blank">mybatisplus&#x7684;saveOrUpdateBatch&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x6761;&#x67E5;&#x8BE2;sql</a></li>
+</ol>
+<h3 id="&#x5728;&#x6267;&#x884C;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#x65F6;&#x52A0;&#x4E8B;&#x52A1;&#x9501;&#x8D85;&#x65F6;">&#x5728;&#x6267;&#x884C;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#x65F6;&#x52A0;&#x4E8B;&#x52A1;&#x9501;&#x8D85;&#x65F6;</h3>
+<ol>
+<li><a href="https://juejin.cn/post/6844904078749728782" target="_blank">MySQL&#x4E8B;&#x52A1;&#x9501;&#x7B49;&#x5F85;&#x8D85;&#x65F6; Lock wait timeout exceeded; try restarting transaction</a></li>
+</ol>
+<h5 id="rewritebatchedstatements&#x53C2;&#x6570;">rewriteBatchedStatements&#x53C2;&#x6570;</h5>
+<ol>
+<li><p><a href="https://www.cnblogs.com/grefr/p/6088000.html" target="_blank">mysql &#x6279;&#x91CF;&#x63D2;&#x5165;&#x4F18;&#x5316;&#x4E4B;rewriteBatchedStatements</a></p>
+</li>
+<li><p><a href="https://www.learnfk.com/question/mysql/26307760.html" target="_blank">MySQL &#x548C; JDBC &#x4E0E; rewriteBatchedStatements=true</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/7eb8eec78b9a" target="_blank">rewriteBatchedStatements&#x5B9E;&#x73B0;&#x539F;&#x7406;</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/04d3d235cb9f" target="_blank">MySQL&#x4E4B;rewriteBatchedStatements</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/chuangxin/article/details/83447387" target="_blank">jdbc mysql&#x8BBE;&#x7F6E;rewriteBatchedStatements&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x9AD8;&#x6027;&#x80FD;&#x6279;&#x91CF;&#x5904;&#x7406; executeBatch&#x8FD4;&#x56DE;&#x503C;&#x95EE;&#x9898;</a></p>
+</li>
+</ol>
+<h4 id="&#x903B;&#x8F91;&#x5220;&#x9664;&#x4E0E;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x51B2;&#x7A81;">&#x903B;&#x8F91;&#x5220;&#x9664;&#x4E0E;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x51B2;&#x7A81;</h4>
+<ol>
+<li><a href="https://baobao555.tech/archives/39" target="_blank">Mybatis-Plus&#x4E2D;&#x903B;&#x8F91;&#x5220;&#x9664;&#x4E0E;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x51B2;&#x7A81;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+<li><a href="https://chsm1998.github.io/2020/08/29/logical-deletion-and-unique-index/" target="_blank">&#x903B;&#x8F91;&#x5220;&#x9664;&#x548C;&#x552F;&#x4E00;&#x7D22;&#x5F15;</a></li>
+</ol>
+<h5 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h5>
+<ol>
+<li><p><a href="https://segmentfault.com/a/1190000008890065" target="_blank">MySQL&#x6279;&#x91CF;SQL&#x63D2;&#x5165;&#x6027;&#x80FD;&#x4F18;&#x5316;</a></p>
+</li>
+<li><p><a href="https://cloud.tencent.com/developer/article/1886324" target="_blank">MySql&#x6570;&#x636E;&#x5E93;Update&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x4E0E;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x591A;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x4E0D;&#x540C;&#x503C;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</a></p>
+</li>
+<li><p><a href="https://www.51cto.com/article/675364.html" target="_blank">MySQL&#x9762;&#x8BD5;&#x5E38;&#x95EE;&#xFF1A;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x63D0;&#x4EA4;&#x540E;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x90FD;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</a></p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="excel导入数据.html" class="navigation navigation-prev " aria-label="Previous page: excel导入数据">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="redis实现消息队列.html" class="navigation navigation-next " aria-label="Next page: redis实现消息队列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"mybatisPlus批量操作","level":"1.4.2","depth":2,"next":{"title":"redis实现消息队列","level":"1.4.3","depth":2,"path":"universal/redis实现消息队列.md","ref":"universal/redis实现消息队列.md","articles":[]},"previous":{"title":"excel导入数据","level":"1.4.1","depth":2,"path":"universal/excel导入数据.md","ref":"universal/excel导入数据.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"back-to-top-button":{},"splitter":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我对一些问题的思考过程","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"universal/mybatisPlus批量操作.md","mtime":"2022-09-10T13:13:10.824Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-24T13:43:58.169Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

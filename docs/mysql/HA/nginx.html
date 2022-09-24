@@ -1,0 +1,1040 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Nginx · 我对一些问题的思考过程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../事务.html" />
+    
+    
+    <link rel="prev" href="HA.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../devOps/devOps.html">
+            
+                <a href="../../devOps/devOps.html">
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../devOps/jenkins/jenkins.md">
+            
+                <span>
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    K 8 S
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../devOps/k8s/devOps.md">
+            
+                <span>
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../devOps/54服务器.html">
+            
+                <a href="../../devOps/54服务器.html">
+            
+                    
+                    54服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../devOps/66服务器.html">
+            
+                <a href="../../devOps/66服务器.html">
+            
+                    
+                    66服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../devOps/devOps.html">
+            
+                <a href="../../devOps/devOps.html">
+            
+                    
+                    Dev Ops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../devOps/linux.html">
+            
+                <a href="../../devOps/linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../devOps/maven.html">
+            
+                <a href="../../devOps/maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../devOps/Metric监控.html">
+            
+                <a href="../../devOps/Metric监控.html">
+            
+                    
+                    Metric监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../devOps/network.html">
+            
+                <a href="../../devOps/network.html">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../devOps/nginx.html">
+            
+                <a href="../../devOps/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../devOps/日志分析.html">
+            
+                <a href="../../devOps/日志分析.html">
+            
+                    
+                    日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../devOps/租户.html">
+            
+                <a href="../../devOps/租户.html">
+            
+                    
+                    租户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../devOps/链路追踪.html">
+            
+                <a href="../../devOps/链路追踪.html">
+            
+                    
+                    链路追踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="HA.html">
+            
+                <a href="HA.html">
+            
+                    
+                    HA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1.1" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../事务.html">
+            
+                <a href="../事务.html">
+            
+                    
+                    事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    universal
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../universal/excel导入数据.html">
+            
+                <a href="../../universal/excel导入数据.html">
+            
+                    
+                    excel导入数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../universal/mybatisPlus批量操作.html">
+            
+                <a href="../../universal/mybatisPlus批量操作.html">
+            
+                    
+                    mybatisPlus批量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../universal/redis实现消息队列.html">
+            
+                <a href="../../universal/redis实现消息队列.html">
+            
+                    
+                    redis实现消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../universal/typora图床.html">
+            
+                <a href="../../universal/typora图床.html">
+            
+                    
+                    typora图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../universal/一个请求的过程..html">
+            
+                <a href="../../universal/一个请求的过程..html">
+            
+                    
+                    一个请求的过程.
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../universal/大数据量同步.html">
+            
+                <a href="../../universal/大数据量同步.html">
+            
+                    
+                    大数据量同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../universal/大文件上传.html">
+            
+                <a href="../../universal/大文件上传.html">
+            
+                    
+                    大文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../universal/微信.html">
+            
+                <a href="../../universal/微信.html">
+            
+                    
+                    微信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../universal/缓存.html">
+            
+                <a href="../../universal/缓存.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    分布式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../分布式/SpringCloud.html">
+            
+                <a href="../../分布式/SpringCloud.html">
+            
+                    
+                    Spring Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    微服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../微服务/config.html">
+            
+                <a href="../../微服务/config.html">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../微服务/gateway.html">
+            
+                <a href="../../微服务/gateway.html">
+            
+                    
+                    Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../微服务/nacos.html">
+            
+                <a href="../../微服务/nacos.html">
+            
+                    
+                    Nacos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../微服务/RPC.html">
+            
+                <a href="../../微服务/RPC.html">
+            
+                    
+                    RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../微服务/注册中心.html">
+            
+                <a href="../../微服务/注册中心.html">
+            
+                    
+                    注册中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../微服务/熔断限流.html">
+            
+                <a href="../../微服务/熔断限流.html">
+            
+                    
+                    熔断限流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../微服务/负载均衡.html">
+            
+                <a href="../../微服务/负载均衡.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../流媒体/流媒体.html">
+            
+                <a href="../../流媒体/流媒体.html">
+            
+                    
+                    流媒体
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../流媒体/FFMPEG常用命令.html">
+            
+                <a href="../../流媒体/FFMPEG常用命令.html">
+            
+                    
+                    FFMPEG常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../流媒体/服务器.html">
+            
+                <a href="../../流媒体/服务器.html">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../流媒体/音视频.html">
+            
+                <a href="../../流媒体/音视频.html">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    质效
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../质效/低代码.html">
+            
+                <a href="../../质效/低代码.html">
+            
+                    
+                    低代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../质效/异常.html">
+            
+                <a href="../../质效/异常.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../质效/数据业务逻辑校验.html">
+            
+                <a href="../../质效/数据业务逻辑校验.html">
+            
+                    
+                    数据业务逻辑校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../质效/编程范式.html">
+            
+                <a href="../../质效/编程范式.html">
+            
+                    
+                    编程范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../质效/需求.html">
+            
+                <a href="../../质效/需求.html">
+            
+                    
+                    需求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://www.cnblogs.com/struggle-1216/p/13511703.html" target="_blank">LVS&#x3001;Nginx&#x3001;HAProxy&#x533A;&#x522B;</a></p>
+<h5 id="&#x5B9E;&#x65F6;&#x6D41;&#x91CF;&#x590D;&#x5236;">&#x5B9E;&#x65F6;&#x6D41;&#x91CF;&#x590D;&#x5236;</h5>
+<ul>
+<li>nginx mirror: &#x5E94;&#x7528;&#x5C42;&#x590D;&#x5236;&#xFF1B;&#x652F;&#x6301;&#x6D41;&#x91CF;&#x653E;&#x5927;&#xFF1B;&#x4E0D;&#x652F;&#x6301;&#x5F55;&#x5236;&#x56DE;&#x653E;&#xFF1B;</li>
+<li>goreplay:&#x5E94;&#x7528;&#x5C42;&#x590D;&#x5236;&#xFF1B;&#x652F;&#x6301;&#x6D41;&#x91CF;&#x653E;&#x5927;&#xFF1B;&#x4E0D;&#x652F;&#x6301;&#x5F55;&#x5236;&#x56DE;&#x653E;&#xFF1B;</li>
+<li>tcpcopy:&#x7F51;&#x7EDC;&#x5C42;&#x590D;&#x5236;&#xFF1B;&#x652F;&#x6301;&#x6D41;&#x91CF;&#x653E;&#x5927;&#xFF1B;&#x652F;&#x6301;&#x5F55;&#x5236;&#x4E0E;&#x56DE;&#x653E;&#xFF1B;</li>
+</ul>
+<p>nginx 1.13.4&#x53CA;&#x540E;&#x7EED;&#x7248;&#x672C;&#x5185;&#x7F6E;ngx_http_mirror_module&#x6A21;&#x5757;&#xFF0C;&#x63D0;&#x4F9B;&#x6D41;&#x91CF;&#x955C;&#x50CF;(&#x590D;&#x5236;)&#x7684;&#x529F;&#x80FD;&#x3002;&#x901A;&#x8FC7;--without-http_mirror_module&#x79FB;&#x9664;&#x6A21;&#x5757;&#x3002;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x751F;&#x6210;&#x5B50;&#x8BF7;&#x6C42;&#x8BBF;&#x95EE;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#xFF0C;&#x5BF9;&#x5B50;&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x505A;&#x5904;&#x7406;&#x3002;</p>
+<pre><code>worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    default_type  application/octet-stream;
+    sendfile        on;
+    server {
+        listen 8181;
+        root html/test;
+    }
+    server {
+        listen 8282;
+        access_log /usr/local/nginx/logs/mir1.log;
+        root html/mir1;
+    }
+    server {
+        listen 8383;
+        access_log /usr/local//nginx/logs/mir2.log;
+        root html/mir2;
+    }
+    upstream backend {
+        server 127.0.0.1:8181;
+    }
+    upstream test_backend1 {
+        server 127.0.0.1:8282;
+    }
+    upstream test_backend2 {
+        server 127.0.0.1:8383;
+    }
+
+    server {
+        listen 80;
+        index  index.html;
+        server_name localhost;
+        location / {
+            mirror /mirrorone;
+            mirror /mirrortwo;
+            proxy_pass http://backend;
+        }
+        location = /mirrorone {
+            internal;
+            proxy_pass http://test_backend1$request_uri;
+        }
+        location = /mirrortwo {
+            internal;
+            proxy_pass http://test_backend2$request_uri;
+        }
+    }
+}
+</code></pre><h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<h5 id="1ubuntu&#x4E0B;&#x5B89;&#x88C5;nginx&#x6BD4;&#x8F83;&#x7B80;&#x5355;">1.Ubuntu&#x4E0B;&#x5B89;&#x88C5;Nginx&#x6BD4;&#x8F83;&#x7B80;&#x5355;</h5>
+<p>&#x6572;&#x5165;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code>    sudo apt-get update
+    sudo apt-get install nginx1212
+</code></pre><h5 id="2ubuntu&#x4E0B;&#x5378;&#x8F7D;&#xFF0C;&#x7A0D;&#x4E0D;&#x6CE8;&#x610F;&#x5C31;&#x4F1A;&#x5165;&#x5751;">2.Ubuntu&#x4E0B;&#x5378;&#x8F7D;&#xFF0C;&#x7A0D;&#x4E0D;&#x6CE8;&#x610F;&#x5C31;&#x4F1A;&#x5165;&#x5751;</h5>
+<pre><code>    sudo apt-get remove nginx nginx-common # &#x5378;&#x8F7D;&#x5220;&#x9664;&#x9664;&#x4E86;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x3002;
+
+    sudo apt-get purge nginx nginx-common # &#x5378;&#x8F7D;&#x6240;&#x6709;&#x4E1C;&#x4E1C;&#xFF0C;&#x5305;&#x62EC;&#x5220;&#x9664;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;
+
+    sudo apt-get autoremove # &#x5728;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x7ED3;&#x675F;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5378;&#x8F7D;&#x5220;&#x9664;Nginx&#x7684;&#x4E0D;&#x518D;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;
+
+    sudo apt-get remove nginx-full nginx-common #&#x5378;&#x8F7D;&#x5220;&#x9664;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x5305;&#x3002;
+</code></pre><h4 id="&#x7F16;&#x8BD1;&#x5B89;&#x88C5;">&#x7F16;&#x8BD1;&#x5B89;&#x88C5;</h4>
+<ol>
+<li><p>wget <a href="http://nginx.org/download/nginx-1.20.2.tar.gz" target="_blank">http://nginx.org/download/nginx-1.20.2.tar.gz</a></p>
+</li>
+<li><p>wget <a href="https://github.com/winshining/nginx-http-flv-module/archive/refs/tags/v1.2.10.tar.gz" target="_blank">https://github.com/winshining/nginx-http-flv-module/archive/refs/tags/v1.2.10.tar.gz</a></p>
+</li>
+<li><p>&#x89E3;&#x538B;</p>
+</li>
+<li><p>&#x7F3A;&#x5C11;&#x4F9D;&#x8D56;&#x7684;&#x8BDD; sudo apt-get install build-essential</p>
+</li>
+<li><pre><code>./configure --prefix=/data/nginx --add-dynamic-module=/data/nginx/nginx-http-flv-module-1.2.10
+make
+make install
+</code></pre></li>
+</ol>
+<p>&#x8BBE;&#x4E3A;&#x5168;&#x5C40;</p>
+<p>ln -s /usr/local/nginx/sbin/nginx  /usr/local/bin/</p>
+<h3 id="&#x6B63;&#x5411;&#x4EE3;&#x7406;">&#x6B63;&#x5411;&#x4EE3;&#x7406;</h3>
+<p>Nginx&#x672C;&#x8EAB;&#x4E0D;&#x652F;&#x6301;HTTPS&#x6B63;&#x5411;&#x4EE3;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;ngx_http_proxy_connect_module&#x6A21;&#x5757;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x652F;&#x6301;https&#x6B63;&#x5411;&#x4EE3;&#x7406;</p>
+<ol>
+<li>git clone <a href="https://github.com/chobits/ngx_http_proxy_connect_module.git" target="_blank">https://github.com/chobits/ngx_http_proxy_connect_module.git</a></li>
+<li>&#x786E;&#x8BA4;Nginx&#x7248;&#x672C;&#x53CA;&#x5BF9;&#x5E94;&#x7684;patch  <a href="https://github.com/chobits/ngx_http_proxy_connect_module?spm=a2c4e.10696291.0.0.668319a4yTdxw4" target="_blank">https://github.com/chobits/ngx_http_proxy_connect_module?spm=a2c4e.10696291.0.0.668319a4yTdxw4</a></li>
+<li>patch -p1 &lt; ngx_http_proxy_connect_module&#x672C;&#x5730;&#x8DEF;&#x5F84;/&#x5BF9;&#x5E94;&#x7248;&#x672C;patch</li>
+<li>&#x5176;&#x4ED6;&#x6B65;&#x9AA4;&#x76F4;&#x63A5;&#x641C;</li>
+</ol>
+<h3 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h3>
+<h6 id="nginx&#x9519;&#x8BEF;">nginx&#x9519;&#x8BEF;</h6>
+<p>invalid PID number &quot;&quot; in &quot;/usr/local/nginx/logs/nginx.pid&quot;</p>
+<p>&#x89E3;&#x51B3;&#xFF1A; /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HA.html" class="navigation navigation-prev " aria-label="Previous page: HA">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../事务.html" class="navigation navigation-next " aria-label="Next page: 事务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Nginx","level":"1.3.1.1","depth":3,"next":{"title":"事务","level":"1.3.2","depth":2,"path":"mysql/事务.md","ref":"mysql/事务.md","articles":[]},"previous":{"title":"HA","level":"1.3.1","depth":2,"path":"mysql/HA/HA.md","ref":"mysql/HA/HA.md","articles":[{"title":"Nginx","level":"1.3.1.1","depth":3,"path":"mysql/HA/nginx.md","ref":"mysql/HA/nginx.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","splitter","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我对一些问题的思考过程","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"mysql/HA/nginx.md","mtime":"2022-09-04T12:40:00.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-24T14:11:40.377Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
