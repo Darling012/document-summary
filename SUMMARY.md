@@ -1,6 +1,9 @@
-# Your Book Title
+# 我对一些问题的思考过程
 
 - [Dev Ops](devOps/devOps.md)
+  - [Jenkins](devOps/jenkins/jenkins.md)
+  - K 8 S
+    * [Dev Ops](devOps/k8s/devOps.md)
   * [54服务器](devOps/54服务器.md)
   * [66服务器](devOps/66服务器.md)
   * [Dev Ops](devOps/devOps.md)
@@ -12,30 +15,27 @@
   * [日志分析](devOps/日志分析.md)
   * [租户](devOps/租户.md)
   * [链路追踪](devOps/链路追踪.md)
-- Docs
-  - Universal
-    * [大文件上传](docs/universal/大文件上传.md)
-    * [缓存](docs/universal/缓存.md)
-  - 分布式
-    * [HA](docs/分布式/HA.md)
-- Mysql
+- mysql
   - [HA](mysql/HA/HA.md)
     * [Nginx](mysql/HA/nginx.md)
   * [事务](mysql/事务.md)
-- Universal
+- universal
+  * [excel导入数据](universal/excel导入数据.md)
   * [mybatisPlus批量操作](universal/mybatisPlus批量操作.md)
   * [redis实现消息队列](universal/redis实现消息队列.md)
   * [typora图床](universal/typora图床.md)
+  * [一个请求的过程.](universal/一个请求的过程..md)
   * [大数据量同步](universal/大数据量同步.md)
   * [大文件上传](universal/大文件上传.md)
   * [微信](universal/微信.md)
   * [缓存](universal/缓存.md)
 - 分布式
+  * [Spring Cloud](分布式/SpringCloud.md)
+- 微服务
   * [Config](微服务/config.md)
   * [Gateway](微服务/gateway.md)
   * [Nacos](微服务/nacos.md)
   * [RPC](微服务/RPC.md)
-  * [Spring Cloud](分布式/SpringCloud.md)
   * [注册中心](微服务/注册中心.md)
   * [熔断限流](微服务/熔断限流.md)
   * [负载均衡](微服务/负载均衡.md)
@@ -44,9 +44,8 @@
   * [服务器](流媒体/服务器.md)
   * [音视频](流媒体/音视频.md)
 - 质效
-  * [excel导入数据](universal/excel导入数据.md)
   * [低代码](质效/低代码.md)
   * [异常](质效/异常.md)
   * [数据业务逻辑校验](质效/数据业务逻辑校验.md)
-  * [缓存](质效/缓存.md)
-  * [项目](质效/需求.md)
+  * [编程范式](质效/编程范式.md)
+  * [需求](质效/需求.md)

@@ -3,5 +3,11 @@
         "theme-default": {
             "showLevel": true
         },
-        "plugins": ["toggle-chapters", "theme-comscore"]
+        "plugins": [
+        "-lunr", "-search", "search-pro",
+        "back-to-top-button",
+        "splitter",
+        "expandable-chapters"
+        ]
+
     }

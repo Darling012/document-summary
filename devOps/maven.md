@@ -1,8 +1,19 @@
 #### 问题：
 
 1. 统一版本号属性传递，层级大于2的情况
+   1. maven3.5以后子pom的parent标签可以使用父pom中properties属性。但子项目的install/deploy不会替换占位符，需引入 flatten-maven-plugin插件。
+      1. [Properties in parent definition are prohibited](https://chenyongjun.vip/articles/98)
+      2. [flatten-maven-plugin ： 处理版本占位符](https://blog.csdn.net/sayyy/article/details/103994302)
+      3. [maven 版本管理与 flatten-maven-plugin](https://zhuanlan.zhihu.com/p/270574226)
+      4. [](https://stackoverflow.com/questions/45598007/properties-in-parent-definition-are-prohibited-in-the-intellij-maven-on-my-mac-o)
+      5. [Maven多模块结构下版本号管理的正确姿势](https://juejin.cn/post/6946138904802099231)
+   2. 单体仓库模式，所有模块代码都在一起，也不用更改版本号，都写死也可接受
 2. 单模块构建
+   1. -am 参数
 3. reactor机制与构建参数同时存在时的构建情况
+   1. 聚合、继承项目结构分为两种情况
+      1. 构建当前模块下所有子模块，即在父pom执行mvn clean package， 那么会构建父pom及协调顺序后各个子pom
+      2. 构建当前模块下指定子模块mvn -pl moduleA -am
 
 #### 前置知识：
 
@@ -10,25 +21,11 @@
 2. maven reactor机制
 3. maven单模块构建参数、向上构建参数、向下构cd 建参数
 
-#### 解决：
-
-1. maven3.5以后子pom的parent标签可以使用父pom中properties属性。但子项目的install/deploy不会替换占位符，需引入 flatten-maven-plugin插件。
-   1. https://chenyongjun.vip/articles/98
-   2. https://blog.csdn.net/sayyy/article/details/103994302
-   3. https://zhuanlan.zhihu.com/p/270574226
-   4. https://stackoverflow.com/questions/45598007/properties-in-parent-definition-are-prohibited-in-the-intellij-maven-on-my-mac-o
-   5. https://juejin.cn/post/6946138904802099231
-   6. 单体仓库模式，所有模块代码都在一起，也不用更改版本号，都写死也可接受
-2. -am 参数
-3. 聚合、继承项目结构分为两种情况
-   1. 构建当前模块下所有子模块，即在父pom执行mvn clean package， 那么会构建父pom及协调顺序后各个子pom
-   2. 构建当前模块下指定子模块mvn -pl moduleA -am
-
 ### 源码组织模式
 
 #### 单体仓库还是多仓库？
 
-1. https://jiapan.me/2020/multi-repo-vs-mono-repo/
+1. [单体仓库与多仓库——两种源码组织模式介绍](https://jiapan.me/2020/multi-repo-vs-mono-repo/)
 2. 业务上有无必要区分AI项目？
    1. 区别在细枝末节，费力重构区分还不如直接分开。
    2. 公共模块也较为个性化，如接入原有用户体系，原有体系厂家各异。
