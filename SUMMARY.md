@@ -1,8 +1,6 @@
 # 我对一些问题的思考过程
 
 - BOM
-  - Book
-    * [架构设计2.0 大型分布式系统架构方法论与实践](BOM/book/架构设计2.0%20大型分布式系统架构方法论与实践.md)
   - Database
     - [三高mysql](BOM/database/三高mysql/三高mysql.md)
       - 备份
@@ -38,6 +36,12 @@
   * [日志分析](devOps/日志分析.md)
   * [租户](devOps/租户.md)
   * [链路追踪](devOps/链路追踪.md)
+- Docs
+  - BOM
+    - Database
+      - 三高mysql
+        - 备份
+          * [如何使用 outfile 命令进行备份](docs/BOM/database/三高mysql/备份/如何使用%20outfile 命令进行备份.md)
 - Mind
   * [关于知识组织方式](mind/关于知识组织方式.md)
   * [思维](mind/思维.md)
@@ -79,6 +83,7 @@
   * [分布式](分布式/分布式.md)
   * [分布式唯一ID](分布式/分布式唯一ID.md)
   * [分布式锁](分布式/分布式锁.md)
+  * [架构设计](分布式/架构设计.md)
 - 单体
   * [数据校验](单体/数据校验.md)
 - 微服务
