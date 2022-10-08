@@ -1,5 +1,27 @@
 # 我对一些问题的思考过程
 
+- BOM
+  - Book
+    * [架构设计2.0 大型分布式系统架构方法论与实践](BOM/book/架构设计2.0%20大型分布式系统架构方法论与实践.md)
+  - Database
+    - [三高mysql](BOM/database/三高mysql/三高mysql.md)
+      - 备份
+        * [如何使用 outfile 命令进行备份](BOM/database/三高mysql/备份/如何使用%20outfile 命令进行备份.md)
+        * [如何使用mysqldump+binlog增量备份](BOM/database/三高mysql/备份/如何使用mysqldump+binlog增量备份.md)
+        * [如何使用mysqldump进行备份](BOM/database/三高mysql/备份/如何使用mysqldump进行备份.md)
+        * [数据库有哪些种类的备份](BOM/database/三高mysql/备份/数据库有哪些种类的备份.md)
+      - 复制
+        * [主从复制配置实战](BOM/database/三高mysql/复制/主从复制配置实战.md)
+        * [复制有哪些类型](BOM/database/三高mysql/复制/复制有哪些类型.md)
+        * [实现三高的手段](BOM/database/三高mysql/复制/实现三高的手段.md)
+- Database
+  * [mysql日志](database/mysql日志.md)
+  * [mysql细碎点](database/mysql细碎点.md)
+  * [mysql规范](database/mysql规范.md)
+  * [mysql锁](database/mysql锁.md)
+  * [Redis](database/redis.md)
+  * [事务](database/事务.md)
+  * [数据库类型](database/数据库类型.md)
 - [Dev Ops](devOps/devOps.md)
   - [Jenkins](devOps/jenkins/jenkins.md)
   - K 8 S
@@ -12,25 +34,53 @@
   * [Metric监控](devOps/Metric监控.md)
   * [Network](devOps/network.md)
   * [Nginx](devOps/nginx.md)
+  * [Tomcat](devOps/tomcat.md)
   * [日志分析](devOps/日志分析.md)
   * [租户](devOps/租户.md)
   * [链路追踪](devOps/链路追踪.md)
-- mysql
+- Mind
+  * [关于知识组织方式](mind/关于知识组织方式.md)
+  * [思维](mind/思维.md)
+- Mysql
   - [HA](mysql/HA/HA.md)
     * [Nginx](mysql/HA/nginx.md)
   * [事务](mysql/事务.md)
-- universal
+- Spring
+  * [springbean作用域](spring/springbean作用域.md)
+  * [SpringBean循环依赖](spring/SpringBean循环依赖.md)
+  * [SpringBean生命周期](spring/SpringBean生命周期.md)
+  * [spring依赖注入](spring/spring依赖注入.md)
+- Universal
   * [excel导入数据](universal/excel导入数据.md)
   * [mybatisPlus批量操作](universal/mybatisPlus批量操作.md)
   * [redis实现消息队列](universal/redis实现消息队列.md)
   * [typora图床](universal/typora图床.md)
-  * [一个请求的过程.](universal/一个请求的过程..md)
+  * [一个请求的过程](universal/一个请求的过程.md)
   * [大数据量同步](universal/大数据量同步.md)
   * [大文件上传](universal/大文件上传.md)
+  * [幂等](universal/幂等.md)
   * [微信](universal/微信.md)
   * [缓存](universal/缓存.md)
-- 分布式
+  * [过期队列](universal/过期队列.md)
+- [分布式](分布式/分布式.md)
+  - [HA](分布式/HA/HA.md)
+    * [keepalived高可用](分布式/HA/keepalived高可用.md)
+    * [mysql高可用](分布式/HA/mysql高可用.md)
+    * [Nginx](分布式/HA/nginx.md)
+    * [redis集群](分布式/HA/redis集群.md)
+  - 数据一致性
+    * [分布式事务](分布式/数据一致性/分布式事务.md)
+    * [高可用多副本一致性](分布式/数据一致性/高可用多副本一致性.md)
+  * [Mq](分布式/mq.md)
+  * [mysql分布式](分布式/mysql分布式.md)
+  * [mysql备份](分布式/mysql备份.md)
+  * [Mysql复制](分布式/Mysql复制.md)
   * [Spring Cloud](分布式/SpringCloud.md)
+  * [分布式](分布式/分布式.md)
+  * [分布式唯一ID](分布式/分布式唯一ID.md)
+  * [分布式锁](分布式/分布式锁.md)
+- 单体
+  * [数据校验](单体/数据校验.md)
 - 微服务
   * [Config](微服务/config.md)
   * [Gateway](微服务/gateway.md)
@@ -47,5 +97,6 @@
   * [低代码](质效/低代码.md)
   * [异常](质效/异常.md)
   * [数据业务逻辑校验](质效/数据业务逻辑校验.md)
+  * [架构](质效/架构.md)
   * [编程范式](质效/编程范式.md)
   * [需求](质效/需求.md)

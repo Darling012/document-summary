@@ -59,7 +59,7 @@ https://www.zhihu.com/question/321451061
 4. AIVideo项目ErrorDecoder，对httpStatus>=400 && <=500的都统一抛出DeepBlueSysException，其他状态码返回feign.FeignException.errorStatus(methodKey, response);，并@SneakyThrows兜底。
 5. AIVideo的业务错误httpStatus为200，不会进入fegin错误处理，所以在fegin调用后要判断业务状态码
 
-##### refrence
+##### reference
 
 1. [**Spring Cloud Feign--全局异常处理--方法/实例**](https://blog.51cto.com/knifeedge/5139865) void 情况？
 
@@ -87,7 +87,7 @@ https://www.zhihu.com/question/321451061
 1.  全局异常处理
 2. get请求多参数
 
-##### refrence
+##### reference
 
 1. https://juejin.cn/column/7087106428485238791
 2. https://www.modb.pro/db/109223

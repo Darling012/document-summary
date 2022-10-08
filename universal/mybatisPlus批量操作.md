@@ -5,7 +5,7 @@
 2. 批量执行多条insert into user(id, name, age) value (1, "a", 17)；
 3. 执行一条sql插入多条数据insert into user(id, name, age) values (1, "a", 17), (2,"b", 18)；
 
-#### refrence
+#### reference
 
 1. [MyBatis 批量插入数据的 3 种方法！](https://segmentfault.com/a/1190000040781858)
 
