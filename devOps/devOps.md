@@ -27,14 +27,6 @@
    3. [Metric监控](Metric监控)：spring-actuator、Prometheus+Alertmanager+Grafana
    4. 自愈、自动伸缩、调度与发布：k8s
 
-##### refrence
-
-1.https://www.kubernetes.org.cn/9711.html
-
-2.
-
-![image-20220823225608390](./pic//image-20220823225608390.png)
-
 **我们需要devOps做什么？**
 
 研发效能提升。让开发更专注于开发。减少测试部署时诸如环境配置、参数等不必要的问题及沟通。

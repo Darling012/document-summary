@@ -3,18 +3,19 @@
 [Mysql复制](Mysql复制.md#Mysql复制)
 [复制与备份关系](https://blog.csdn.net/m0_37628958/article/details/105311388)
 
-## MySQL备份
+## MySQL 备份
+[数据库有哪些种类的备份](三高mysql.md#数据库有哪些种类的备份)
 [理解Mysql备份与恢复](https://mp.weixin.qq.com/s?__biz=MzU4MTg3OTA3MQ==&mid=2247484028&idx=1&sn=19c3e2cea07c0b1aff6ea021d2b4fe82)
 #### 类型
 1. 完整备份：备份所有数据
-2. 增量备份：仅备份上次完整备份或增量备份以来变化的数据 
+2. [增量备份](如何使用mysqldump+binlog增量备份.md#如何使用mysqldump%20binlog增量备份)：仅备份上次完整备份或增量备份以来变化的数据 
 3. 差异备份：仅备份上次完整备份以来变化的数据  
 4. 热备份：正常运行备份，数据库读写不受影响（mysqldump-->innodb）
 5. 温备份：数据库仅可以执行读操作（mysqldump-->myisam）
 6. 冷备份：离线备份，读写都不可用，数据库停机无法进行任何操作  
 7. 逻辑备份：将 sql 语句导出文本文件中（mysqldump），可阅读，与存储引擎无关
 8. 物理备份：裸文件，将数据库底层文件拷贝（xtrabackup、mysqlhotcopy），不可阅读，与存储引擎有关
-9. 日志备份：binlog 备份
+9. 日志备份：[binlog](mysql日志.md#binlog) 备份
 
 ##### 存储引擎所支持的形式
 MyISAM：温备，不支持热备  

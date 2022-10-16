@@ -1,6 +1,6 @@
 # Mysql复制
 依赖 [binlog](mysql锁.md#binlog) 逻辑日志
-三种复制模式：
+[三种复制模式](三高mysql.md#复制有哪些类型)
 1. 异步
 2. 半同步
 	1. 有损 slave 丢失最后一批提交数据
@@ -19,7 +19,7 @@
 ## binlog
 ![mysql日志](mysql日志.md#binlog)
 ## 异步复制
-##### 步骤
+##### 步骤[主从复制配置实战](三高mysql.md#主从复制配置实战)
 1. 主库将数据更改记录到 binlog 中，通知 dump 线程发送新 binlog
 2. 备库将主库的 binlog 复制到 relaylog 中
 3. 备库读取 relaylog 回放脚本

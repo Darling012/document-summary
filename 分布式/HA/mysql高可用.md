@@ -9,7 +9,7 @@
 
 
 ## MySQL备份
-![mysql备份](mysql备份.md#MySQL备份)
+![mysql备份](mysql备份.md#MySQL%20备份)
 
 ## Mysql 复制
 ![Mysql复制](Mysql复制.md#Mysql复制)
