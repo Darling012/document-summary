@@ -1,7 +1,0 @@
-### {{date}}
-
-#todoList
-- [ ] 
-#### done
-
-#### mind
