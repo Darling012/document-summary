@@ -3,5 +3,9 @@
 		"vuepress": "2.0.0-beta.67",
 		"@vuepress/client": "2.0.0-beta.67",
 		"vue": "^3.3.4"
+	},
+	"dependencies": {
+		"gitbook-plugin-chapter-fold": "0.0.4",
+		"gitbook-plugin-expandable-chapters": "^0.2.0"
 	}
 }

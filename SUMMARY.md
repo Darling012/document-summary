@@ -18,37 +18,6 @@
     * [杨波-微服务架构核心20讲](BOM/cloud/杨波-微服务架构核心20讲.md)
   - Database
     * [三高mysql](BOM/database/三高mysql.md)
-  - English
-    * [MOC-英语兔](BOM/english/MOC-英语兔.md)
-    * [主谓一致](BOM/english/主谓一致.md)
-    * [介词](BOM/english/介词.md)
-    * [从句](BOM/english/从句.md)
-    * [代词](BOM/english/代词.md)
-    * [使役动词](BOM/english/使役动词.md)
-    * [倒装](BOM/english/倒装.md)
-    * [冠词](BOM/english/冠词.md)
-    * [副词](BOM/english/副词.md)
-    * [动词分类](BOM/english/动词分类.md)
-    * [动词时态](BOM/english/动词时态.md)
-    * [动词语气（虚拟语气）](BOM/english/动词语气（虚拟语气）.md)
-    * [助动词&情态动词](BOM/english/助动词&情态动词.md)
-    * [句子成分&分类](BOM/english/句子成分&分类.md)
-    * [叹词](BOM/english/叹词.md)
-    * [名词](BOM/english/名词.md)
-    * [强调](BOM/english/强调.md)
-    * [形容词](BOM/english/形容词.md)
-    * [数词](BOM/english/数词.md)
-    * [构词法](BOM/english/构词法.md)
-    * [独立主格](BOM/english/独立主格.md)
-    * [省略](BOM/english/省略.md)
-    * [系动词](BOM/english/系动词.md)
-    * [英文标点](BOM/english/英文标点.md)
-    * [英语语法怎么学](BOM/english/英语语法怎么学.md)
-    * [英语语法综述](BOM/english/英语语法综述.md)
-    * [被动](BOM/english/被动.md)
-    * [连词](BOM/english/连词.md)
-    * [限定词](BOM/english/限定词.md)
-    * [非谓语动词](BOM/english/非谓语动词.md)
   - Ide
     - Nginx
       * [Nginx入门到实践－Nginx 中间件](BOM/ide/nginx/Nginx入门到实践－Nginx%20中间件.md)
@@ -57,8 +26,6 @@
     * [RocketMQ核心技术精讲与高并发抗压实战](BOM/mq/RocketMQ核心技术精讲与高并发抗压实战.md)
     * [新RabbitMQ精讲，项目驱动落地，分布式事务拔高](BOM/mq/新RabbitMQ精讲，项目驱动落地，分布式事务拔高.md)
     * [消息队列高手课](BOM/mq/消息队列高手课.md)
-  - Others
-    * [程序员职业小白书 —— 如何规划和经营你的职业](BOM/others/程序员职业小白书%20—— 如何规划和经营你的职业.md)
   - Security
     * [Java开发企业级权限管理系统](BOM/security/Java开发企业级权限管理系统.md)
     * [OAuth 2.0实战课](BOM/security/OAuth%202.0实战课.md)
@@ -66,40 +33,11 @@
     * [Spring Security + OAuth2 精讲多场景打造企业级认证与授权](BOM/security/Spring%20Security + OAuth2 精讲多场景打造企业级认证与授权.md)
     * [spring security 开发安全的rest服务](BOM/security/spring%20security 开发安全的rest服务.md)
     * [安全攻防技能30讲](BOM/security/安全攻防技能30讲.md)
-  - Simp Read
-    * [冒号课堂 §1_4：初识范式](BOM/simpRead/10-冒号课堂%20§1_4：初识范式@annote.md)
-    * [12-如何掌握所有的程序语言@annote](BOM/simpRead/12-如何掌握所有的程序语言@annote.md)
-    * [13-一文看懂人工智能、机器学习、深度学习与神经网络之间的区别与关系@annote](BOM/simpRead/13-一文看懂人工智能、机器学习、深度学习与神经网络之间的区别与关系@annote.md)
-    * [一文读懂什么是进程、线程、协程](BOM/simpRead/14-一文读懂什么是进程、线程、协程@annote.md)
-    * [有栈协程与无栈协程_有栈协程和无栈协程_李兆龙的博客的博客 - CSDN 博客](BOM/simpRead/15-有栈协程与无栈协程_有栈协程和无栈协程_李兆龙的博客的博客%20- CSDN 博客@annote.md)
-    * [6-blog_http-encoding_md at master · bestswifter_blog · GitHub@annote](BOM/simpRead/6-blog_http-encoding_md%20at master · bestswifter_blog · GitHub@annote.md)
-    * [冒号课堂 §1_5：开发技术](BOM/simpRead/7-冒号课堂%20§1_5：开发技术@annote.md)
-    * [冒号课堂 §2_1：命令范式](BOM/simpRead/8-冒号课堂%20§2_1：命令范式@annote.md)
-    * [9-再谈编程范式（1）—程序语言背后的思想 - 模型设计_ 领域设计_ 软件设计_ - 周陆军的个人网站@annote](BOM/simpRead/9-再谈编程范式（1）—程序语言背后的思想%20- 模型设计_ 领域设计_ 软件设计_ - 周陆军的个人网站@annote.md)
-    * [如何正确理解线程机制中常见的 I_O 模型](BOM/simpRead/如何正确理解线程机制中常见的%20I_O 模型.md)
-    * [如何正确理解线程机制中常见的 IO 模型](BOM/simpRead/如何正确理解线程机制中常见的%20IO 模型.md)
   - Spring
     * [Spring AOP 编程思想](BOM/spring/Spring%20AOP 编程思想.md)
     * [spring核心编程思想](BOM/spring/spring核心编程思想.md)
-  - Template
-    * [Day Template](BOM/template/dayTemplate.md)
   - 工程与管理
     * [人人都要学的项目管理](BOM/工程与管理/人人都要学的项目管理.md)
-  - 软考
-    - 系统架构
-      * [系统架构师备考](BOM/软考/系统架构/系统架构师备考.md)
-    - 项目管理
-      - [论文](BOM/软考/项目管理/论文/论文.md)
-        * [成本](BOM/软考/项目管理/论文/成本.md)
-        * [沟通](BOM/软考/项目管理/论文/沟通.md)
-        * [资源](BOM/软考/项目管理/论文/资源.md)
-        * [项目整合管理论文](BOM/软考/项目管理/论文/项目整合管理论文.md)
-        * [风险](BOM/软考/项目管理/论文/风险.md)
-      * [132个工具和技术](BOM/软考/项目管理/132个工具和技术.md)
-      * [49个过程的定义和作用](BOM/软考/项目管理/49个过程的定义和作用.md)
-      * [教材](BOM/软考/项目管理/教材.md)
-      * [项目管理备考](BOM/软考/项目管理/项目管理备考.md)
-      * [项目管理计划和文件](BOM/软考/项目管理/项目管理计划和文件.md)
 - Concurrency
   * [Java锁](concurrency/Java锁.md)
   * [Queue](concurrency/queue.md)
